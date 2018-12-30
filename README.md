@@ -1,5 +1,22 @@
 # koa-auth-basic-secure
 
+[![npm version](https://badge.fury.io/js/koa-auth-basic-secure.svg)](https://badge.fury.io/js/koa-auth-basic-secure)
+
+[![Build Status](https://travis-ci.org/cjanietz/koa-auth-basic-secure.svg?branch=master)](https://travis-ci.org/cjanietz/koa-auth-basic-secure)
+
+[![codecov](https://codecov.io/gh/cjanietz/koa-auth-basic-secure/branch/master/graph/badge.svg)](https://codecov.io/gh/cjanietz/koa-auth-basic-secure)
+
+This library is a middleware for protecting Koa Servers/Endpoints with HTTP Basic authentication.
+The focus thereby is on providing a
+
+This is similar to the Spring Security approach to HTTP Basic protection.
+
+Features:
+
+-   Multiple users
+-   Password hashing
+-   In
+
 This library is a middleware for protecting Koa Servers/Endpoints with HTTP Basic authentication.
 The focus thereby is on providing a hash based authentication, which means no clear text passwords are written to code.
 This is similar to the Spring Security approach to HTTP Basic protection.
@@ -19,10 +36,6 @@ Features:
 Sample:
 
 ```ts
-import * as Koa from 'koa';
-import { basicAuth } from 'koa-basic-auth-secure';
-const app = new Koa();
-app.use(
     basicAuth({
         credentials: [{ username: 'example', password: '<HASH HERE>' }],
         passwordProtection: 'mySecret'
@@ -36,8 +49,14 @@ app.use(ctx => {
 To get the above mentioned hash for a user, use the following command:
 
 ```
-hashPassword hmac --secret mySecret --input example
-hashPassword bcrypt --rounds 10 --input test
+```
+
+To get the above mentioned hash for a user, use the following command:
+
+```
+For the cmd line t work you can use either `yarn run hashPassword ...` or add `hashPassword` to your node scripts.
+
+The
 ```
 
 For the cmd line t work you can use either `yarn run hashPassword ...` or add `hashPassword` to your node scripts.
@@ -49,14 +68,12 @@ If you want to use bcrypt, you either have to do:
 
 ## Configuration
 
-```ts
-{
-        credentials: UsernamePasswordCombination[];
-        passwordProtection: PasswordService | string;
-        customRealm?: string;
-        cache?: Cache;
-}
-```
+    {
+            credentials: UsernamePasswordCombination[];
+            passwordProtection: PasswordService | string;
+            customRealm?: string;
+            cache?: Cache;
+    }
 
 -   `credentials` (**required**) this is the collection of username password objects. Each entry requires a username and a password
     (Hashed depending) on your password protection config. e.g. `[{username: "test", password: "<HASH>"}]`.

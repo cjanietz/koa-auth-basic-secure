@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A library implementing HTTP basic authentication for koa using hashing based methods",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cjanietz/koa-auth-basic-secure.git"
+  },
   "bin": {
     "hashPassword": "./bin/hashPassword.js"
   },
