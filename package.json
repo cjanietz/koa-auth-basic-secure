@@ -1,5 +1,5 @@
 {
-  "name": "koa-basic-auth-secure",
+  "name": "koa-auth-basic-secure",
   "version": "1.0.0",
   "description": "A library implementing HTTP basic authentication for koa using hashing based methods",
   "main": "lib/index.js",

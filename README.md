@@ -1,4 +1,4 @@
-# koa-basic-auth-secure
+# koa-auth-basic-secure
 
 This library is a middleware for protecting Koa Servers/Endpoints with HTTP Basic authentication.
 The focus thereby is on providing a hash based authentication, which means no clear text passwords are written to code.
