@@ -1,0 +1,24 @@
+{
+  "name": "simpleserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "ts-node index.ts",
+    "postinstall": "install-local"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.0.47",
+    "install-local": "^0.6.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "koa": "^2.6.2"
+  },
+  "localDependencies": {
+    "koa-basic-auth-secure": "../.."
+  }
+}
