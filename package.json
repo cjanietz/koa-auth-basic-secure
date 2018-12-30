@@ -10,6 +10,7 @@
     "clean": "del-cli \"+(lib|bin)/**/*.js\" !\"**/node_modules/**\" && del-cli \"+(lib|bin)/**/*.d.ts\"  !\"**/node_modules/**\"",
     "build": "tsc",
     "test": "jest",
+    "test:ci": "jest --coverage --ci --forceExit --detectOpenHandles --runInBand",
     "lint:ts": "tsc --noEmit",
     "lint:tslint": "tslint lib/**/*.ts",
     "lint": "npm run lint:ts && npm run lint:tslint",
@@ -68,6 +69,7 @@
       "lib/**/*.ts",
       "!**/*.d.ts"
     ],
+    "coverageDirectory": "<rootDir>/coverage",
     "testRegex": "./(.*/__tests__/.*\\.(test|spec))(\\.int)?\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",

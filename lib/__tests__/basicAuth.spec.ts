@@ -46,7 +46,11 @@ each([
             credentials: [
                 {
                     username: 'test',
-                    password: '$2b$04$sudfdtAWQDhOtT9K.FdXLe51eydOk.OTUNLCgi4sZL927fst3XOuu'
+                    password: '$2b$10$u15qtrw5K.gJMDMVOA8GWuFKMrW2hErt6MJBcHmZLt5QRU8OnoGgi'
+                },
+                {
+                    username: 'testCache',
+                    password: '$2b$10$u15qtrw5K.gJMDMVOA8GWuFKMrW2hErt6MJBcHmZLt5QRU8OnoGgi'
                 }
             ],
             passwordProtection: new BCryptPasswordService(),
@@ -94,7 +98,7 @@ each([
             const startTime1 = new Date().getTime();
             await request(app.callback())
                 .get('/')
-                .auth('test', 'test2')
+                .auth('testCache', 'test2')
                 .expect('Hello World')
                 .expect(200);
             const endTime1 = new Date().getTime();
@@ -102,7 +106,7 @@ each([
             const startTime2 = new Date().getTime();
             await request(app.callback())
                 .get('/')
-                .auth('test', 'test2')
+                .auth('testCache', 'test2')
                 .expect('Hello World')
                 .expect(200);
             const endTime2 = new Date().getTime();
