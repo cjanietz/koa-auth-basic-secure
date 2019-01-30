@@ -1,7 +1,9 @@
-# koa-basic-auth-secure
+# koa-auth-basic-secure
 
-[![npm version](https://badge.fury.io/js/koa-auth-basic-secure.svg)](https://badge.fury.io/js/koa-auth-basic-secure)
-[![Build Status](https://travis-ci.org/cjanietz/koa-auth-basic-secure.svg?branch=master)](https://travis-ci.org/cjanietz/koa-auth-basic-secure)
+[![npm version](https://badge.fury.io/js/koa-auth-basic-secure.svg)](https://badge.fury.io/js/koa-auth-basic-secure)
+
+[![Build Status](https://travis-ci.org/cjanietz/koa-auth-basic-secure.svg?branch=master)](https://travis-ci.org/cjanietz/koa-auth-basic-secure)
+
 [![codecov](https://codecov.io/gh/cjanietz/koa-auth-basic-secure/branch/master/graph/badge.svg)](https://codecov.io/gh/cjanietz/koa-auth-basic-secure)
 
 This library is a middleware for protecting Koa Servers/Endpoints with HTTP Basic authentication.
@@ -72,6 +74,13 @@ If you want to use bcrypt, you either have to do:
 
 -   `cache` A cache which fulfills the interface of get/set, such as `node-cache` or the simple implementation in this library.
     This is only of interest if computationally expensive hashing such as bcrypt is used.
+
+## Changelog
+
+### 1.0.1
+
+-   Properly added types
+-   Updated dependencies
 
 ## Remarks
 

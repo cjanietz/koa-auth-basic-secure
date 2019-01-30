@@ -1,8 +1,14 @@
-.idea/
+.git/**
+.idea/**
 .prettierignore
 .prettierrc.yml
 package-lock.json
 wallaby.js
-**/__tests__
+
 examples/
 **/*.ts
+tslint.json
+tsconfig.json
+
+!**/*.d.ts
+**/__tests__/**
